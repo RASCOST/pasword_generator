@@ -4,7 +4,7 @@ import random
 import string
 
 def home(request):
-    return render(request, 'generator/home.html', {'password': 'ergege54654'})
+    return render(request, 'generator/home.html')
 
 def password(request):
     password = ''
@@ -25,3 +25,6 @@ def password(request):
         password += random.choice(characters)
 
     return render(request, 'generator/password.html', { 'password': password })
+
+def about(request):
+    return render(request, 'generator/about.html')
